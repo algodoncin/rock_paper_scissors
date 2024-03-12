@@ -21,7 +21,7 @@ const gameRound = (playerSelection, computerSelection) => {
     let player = playerSelection.toLowerCase()
     let computer = computerSelection.toLowerCase();
     let result = "";
-    let resultNum = 0;
+    let resultNum = 3;
  
     if(player != "paper" && player != "rock" && player != "scissor"){
         result = `${playerSelection} is not a valid choice`;
@@ -91,7 +91,7 @@ for(i ; i < 5 ; i++){
     if(roundResult[1] == 0){
         PCScore = PCScore + 1;
     }
-    else if(roundResult[1] == 2){
+    else if(roundResult[1] == 2 || roundResult[1] == 3){
         i = i - 1;
         console.log("Let's repeat the round");
     }
